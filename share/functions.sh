@@ -42,9 +42,8 @@ xdialog() {
 menu_system() {
 
     # Arguments
-    local MENU_ROOT="$1"             # Menu root on filesystem
-    local MENU_PATH=$(realpath "$2") # Current position in menu
-    local CANCEL_LABEL="$3" 
+    local MENU_ROOT="$1"                # Menu root on filesystem
+    local MENU_PATH=$(realpath -m "$2") # Current position in menu
 
     # What's here?
     local FS_PATH="${MENU_ROOT}/${MENU_PATH##\/}"
